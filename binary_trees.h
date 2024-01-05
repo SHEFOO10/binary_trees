@@ -66,5 +66,7 @@ int binary_tree_bth(const binary_tree_t *tree);
 int binary_tree_size_pbt(const binary_tree_t *tree);
 int binary_tree_expected_nodes(int height);
 
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+int binary_tree_sibling_calc_depth(binary_tree_t *node);
 
 #endif
