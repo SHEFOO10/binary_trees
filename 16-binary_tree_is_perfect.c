@@ -19,7 +19,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	if (height > 3)
 		return (0);
-	if (binary_tree_bf(tree) == 0 || (expected_nodes == size))
+	if (binary_tree_bf(tree) == 0 || (expected_nodes == size) || (!tree->left && !tree->right))
 		return (1);
 	return (0);
 }
