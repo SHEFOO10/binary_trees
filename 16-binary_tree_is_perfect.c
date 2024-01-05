@@ -10,7 +10,7 @@
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	if (tree == NULL || binary_tree_bth(tree) > 3)
+	if (tree == NULL)
 		return (0);
 
 	if (binary_tree_bf(tree) == 0)
