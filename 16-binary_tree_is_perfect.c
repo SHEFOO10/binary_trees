@@ -1,5 +1,5 @@
 #include "binary_trees.h"
-#include <stdio.h>
+
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect.
  *
@@ -12,39 +12,17 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int height, size, expected_nodes = 0;
 
+	if (tree == NULL)
+		return (0);
 	height = binary_tree_bth(tree);
 	size = binary_tree_size_pbt(tree);
 	expected_nodes = binary_tree_expected_nodes(height);
-	if (tree == NULL)
-		return (0);
-	if (height > 3)
-		return (0);
-	if (binary_tree_bf(tree) == 0 || (expected_nodes == size) || (!tree->left && !tree->right))
+	if (expected_nodes == size)
 		return (1);
 	return (0);
 }
 
 
-/**
- * binary_tree_bf - calculate balance factor.
- *
- * @tree: a pointer to root node of a binary tree.
- *
- * Return: binary factor if it's balanced it returns 0.
- */
-
-int binary_tree_bf(const binary_tree_t *tree)
-{
-	int l_height = 0, r_height = 0;
-
-	if (tree == NULL)
-		return (0);
-
-	l_height = binary_tree_bth(tree->left);
-	r_height = binary_tree_bth(tree->right);
-
-	return (l_height - r_height);
-}
 
 /**
  * binary_tree_bth - calculate height of a binary tree
