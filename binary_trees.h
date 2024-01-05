@@ -64,5 +64,8 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 int binary_tree_bf(const binary_tree_t *tree);
 int binary_tree_bth(const binary_tree_t *tree);
+int binary_tree_size_pbt(const binary_tree_t *tree);
+int binary_tree_expected_nodes(int height);
+
 
 #endif
