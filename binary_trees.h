@@ -107,4 +107,11 @@ int binary_tree_balance(const binary_tree_t *tree);
  */ 
 int binary_tree_height_b(const binary_tree_t *tree);
 
+/**
+ * checks if a binary tree is full.
+ */
+int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_height_f(const binary_tree_t *tree);
+int binary_tree_size_f(const binary_tree_t *tree);
+
 #endif
